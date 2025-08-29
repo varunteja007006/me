@@ -33,6 +33,16 @@ https://github.com/birobirobiro/awesome-shadcn-ui?tab=readme-ov-file
 
 https://awesome-shadcn-ui.vercel.app/
 
+https://github.com/inextdeve/shadcn-country-region-select
+
+https://github.com/jakobhoeg/shadcn-chat
+
+https://github.com/ManishBisht777/file-vault
+
+https://emblor.jaleelbennett.com/introduction?source=post_page-----0846b0f57596--------------------------------
+
+https://github.com/johnpolacek/date-range-picker-for-shadcn
+
 ##
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
