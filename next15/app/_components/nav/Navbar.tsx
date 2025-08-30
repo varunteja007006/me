@@ -17,10 +17,12 @@ import { SiGithub } from "react-icons/si";
 import { ModeToggle } from "@/components/toggle-theme";
 import { miniProjects, stuffIBuilt } from "./data/nav";
 import Link from "next/link";
+import Icon from "./Icon";
 
 export function Navbar() {
   return (
-    <div className="w-full flex flex-row items-center justify-center px-10 py-2 text-primary">
+    <div className="w-full flex-row hidden md:flex items-center justify-between px-10 py-2 text-primary">
+      <Icon />
       <NavigationMenu viewport={false}>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -106,13 +108,13 @@ export function Navbar() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <div></div>
     </div>
   );
 }
 
 function ListItem({
   title,
-  children,
   description,
   href,
   githubLink,

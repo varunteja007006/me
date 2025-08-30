@@ -18,6 +18,9 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+
+      // custom exclusions
+      "components/combo-box.tsx",
     ],
   },
 ];

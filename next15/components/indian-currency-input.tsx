@@ -1,11 +1,15 @@
 import { cn } from "@/lib/utils";
 import React, { forwardRef, memo } from "react";
-import { NumberFormatBase } from "react-number-format";
+import { NumberFormatBase, NumberFormatBaseProps } from "react-number-format";
 
-const CurrencyInputIndian = forwardRef(function CurrencyInputIndian(
-  { maximumFractionDigits, ...props }: any,
-  ref
-) {
+const CurrencyInputIndian = forwardRef(function CurrencyInputIndian({
+  maximumFractionDigits,
+  ...props
+}: NumberFormatBaseProps & {
+  ref?: React.Ref<HTMLInputElement>;
+  maximumFractionDigits: number;
+  max?: number;
+}) {
   const format = (numStr: string) => {
     if (numStr === "") return "";
 
