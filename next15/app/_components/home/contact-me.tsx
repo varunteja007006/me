@@ -1,7 +1,7 @@
-import * as React from "react";
-import contactData from "@/app/_components/home/data/contact";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { Card } from "@/components/ui/card";
+import * as React from "react"
+import contactData from "@/app/_components/home/data/contact"
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table"
+import { Card } from "@/components/ui/card"
 
 export default function ContactMe() {
   return (
@@ -11,21 +11,21 @@ export default function ContactMe() {
       <Card className="p-2">
         <Table>
           <TableBody>
-            {contactData.map((item) => {
+            {contactData.map(item => {
               return (
-                <TableRow key={item.id} className="border-none ">
-                  <TableCell className="capitalize font-semibold">
+                <TableRow key={item.id} className="border-none">
+                  <TableCell className="font-semibold capitalize">
                     {item.contact_type}
                   </TableCell>
                   <TableCell className="font-semibold">
                     <a href={item.contact_href}>{item.contact_value}</a>
                   </TableCell>
                 </TableRow>
-              );
+              )
             })}
           </TableBody>
         </Table>
       </Card>
     </section>
-  );
+  )
 }

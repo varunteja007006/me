@@ -1,24 +1,24 @@
-"use client";
-import * as React from "react";
+"use client"
+import * as React from "react"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
-import { FormControl } from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/popover"
+import { FormControl } from "@/components/ui/form"
+import { Button } from "@/components/ui/button"
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/components/ui/command";
-import { CommandList, CommandLoading } from "cmdk";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { cn } from "@/lib/utils";
-import { Check, ChevronDown, LoaderCircle } from "lucide-react";
-import { ControllerRenderProps, UseFormReturn } from "react-hook-form";
+} from "@/components/ui/command"
+import { CommandList, CommandLoading } from "cmdk"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+import { cn } from "@/lib/utils"
+import { Check, ChevronDown, LoaderCircle } from "lucide-react"
+import { ControllerRenderProps, UseFormReturn } from "react-hook-form"
 
 /**
  * Render a ComboBox component with a dropdown menu for selecting options.
@@ -26,43 +26,43 @@ import { ControllerRenderProps, UseFormReturn } from "react-hook-form";
  */
 
 export type ComboBoxProps = {
-  options: any[];
-  form: UseFormReturn<any>;
-  field: ControllerRenderProps<any>;
-  value: string;
-  label: string;
-  defaultValue?: string;
-  cbFunc?: (value: string) => void;
-  required?: boolean;
-  disabled?: boolean;
-  sizeOffset?: number;
-  loading?: boolean;
-};
+  options: any[]
+  form: UseFormReturn<any>
+  field: ControllerRenderProps<any>
+  value: string
+  label: string
+  defaultValue?: string
+  cbFunc?: (value: string) => void
+  required?: boolean
+  disabled?: boolean
+  sizeOffset?: number
+  loading?: boolean
+}
 
 function ComboBox(props: Readonly<ComboBoxProps>) {
-  const { field, form, value, label, options } = props;
+  const { field, form, value, label, options } = props
 
   if (!field || !form) {
-    throw new Error("Field and form are required");
+    throw new Error("Field and form are required")
   }
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   const [popoverContentDimensions, setPopoverContentDimensions] =
-    React.useState<{ width: string }>({ width: "280px" });
+    React.useState<{ width: string }>({ width: "280px" })
 
-  const popupRef = React.useRef<HTMLButtonElement>(null);
+  const popupRef = React.useRef<HTMLButtonElement>(null)
 
   //  To check the width of the button and set the popover content width accordingly
   React.useLayoutEffect(() => {
-    const refValue = popupRef?.current;
+    const refValue = popupRef?.current
     if (refValue) {
-      const width = refValue?.offsetWidth || 280;
+      const width = refValue?.offsetWidth || 280
       setPopoverContentDimensions({
         width: `${width + (props?.sizeOffset ?? 0)}px`,
-      });
+      })
     }
-  }, [popupRef?.current]);
+  }, [popupRef?.current])
 
   const modifiedOptions = React.useMemo(
     () =>
@@ -72,53 +72,53 @@ function ComboBox(props: Readonly<ComboBoxProps>) {
           value: item[value],
           label: item[label],
           index: index + 1,
-        };
+        }
       }),
     [options, value, label]
-  );
+  )
 
   // check if selectedValue is present or not and return true or false
   const checkSelectedValue = () => {
     if (!field.value) {
-      return true;
+      return true
     }
-    return !modifiedOptions?.find((item) => item.value === field.value)?.label;
-  };
+    return !modifiedOptions?.find(item => item.value === field.value)?.label
+  }
 
   // get select value based on selectedValue & also reset the value of this dropdown
   // if selectedValue is not present
   const getSelectedValue = () => {
     if (!field.value) {
-      return "Select";
+      return "Select"
     }
     const selectedLabel = modifiedOptions?.find(
-      (item) => item.value === field.value
-    )?.label;
-    return selectedLabel || "Select";
-  };
+      item => item.value === field.value
+    )?.label
+    return selectedLabel || "Select"
+  }
 
   const handleOnSelect = (item: any) => {
     if (props.required) {
       // if required is true then set the value and do not let user to un-select
-      form?.setValue(field.name, item.value);
+      form?.setValue(field.name, item.value)
     } else {
       // if required is false then set the value and let user to un-select
       form?.getValues(field.name) === item.value
         ? form?.setValue(field.name, props?.defaultValue ?? "")
-        : form?.setValue(field.name, item.value);
+        : form?.setValue(field.name, item.value)
     }
 
     // if cbFunc is present then call it
     if (props.cbFunc && typeof props.cbFunc === "function") {
-      props.cbFunc(item.value);
+      props.cbFunc(item.value)
     }
 
     // clear the errors whenever the user selects an option
-    form?.clearErrors(field.name);
+    form?.clearErrors(field.name)
 
     // close the popover
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <Popover open={open} onOpenChange={setOpen} modal>
@@ -128,7 +128,7 @@ function ComboBox(props: Readonly<ComboBoxProps>) {
             variant="outline"
             role="menu"
             className={cn(
-              "w-full justify-between disabled:hover:bg-white/[0.7] !pointer-events-auto disabled:cursor-not-allowed",
+              "!pointer-events-auto w-full justify-between disabled:cursor-not-allowed disabled:hover:bg-white/[0.7]",
               checkSelectedValue() && "text-muted-foreground"
             )}
             ref={popupRef}
@@ -138,7 +138,7 @@ function ComboBox(props: Readonly<ComboBoxProps>) {
             <span className="overflow-hidden text-ellipsis">
               {getSelectedValue()}
             </span>
-            <ChevronDown className="ml-2 w-4 h-4 opacity-50 shrink-0" />
+            <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </FormControl>
       </PopoverTrigger>
@@ -153,12 +153,12 @@ function ComboBox(props: Readonly<ComboBoxProps>) {
               <CommandEmpty>Not found</CommandEmpty>
               {props?.loading && (
                 <CommandLoading>
-                  <LoaderCircle className="w-6 h-6 animate-spin" />
+                  <LoaderCircle className="h-6 w-6 animate-spin" />
                 </CommandLoading>
               )}
               <CommandGroup>
                 {modifiedOptions
-                  ? modifiedOptions.map((item) => (
+                  ? modifiedOptions.map(item => (
                       <CommandItem
                         className={cn(
                           `flex cursor-default items-center justify-start`,
@@ -171,9 +171,9 @@ function ComboBox(props: Readonly<ComboBoxProps>) {
                       >
                         <span className="flex-1">{item.label}</span>
                         {item.value === form?.getValues(field.name) ? (
-                          <Check className="mr-2 w-4 h-4" />
+                          <Check className="mr-2 h-4 w-4" />
                         ) : (
-                          <div className="mr-2 w-4 h-4"> </div>
+                          <div className="mr-2 h-4 w-4"> </div>
                         )}{" "}
                       </CommandItem>
                     ))
@@ -185,7 +185,7 @@ function ComboBox(props: Readonly<ComboBoxProps>) {
         </Command>
       </PopoverContent>
     </Popover>
-  );
+  )
 }
 
-export default ComboBox;
+export default ComboBox

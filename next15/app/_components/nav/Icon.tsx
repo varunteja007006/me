@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import React from "react";
+import React from "react"
 
-import { motion } from "motion/react";
-import Link from "next/link";
+import { motion } from "motion/react"
+import Link from "next/link"
 
 export default function Icon() {
-  const text = "<Developer />";
+  const text = "<Developer />"
   const containerVariants = {
     hidden: {},
     visible: {
@@ -20,7 +20,7 @@ export default function Icon() {
         when: "beforeChildren",
       },
     },
-  };
+  }
 
   const letterVariants = {
     hidden: {
@@ -45,7 +45,7 @@ export default function Icon() {
         delay: i * 0.02,
       },
     }),
-  };
+  }
 
   return (
     <motion.div
@@ -98,5 +98,5 @@ export default function Icon() {
         </motion.span>
       </Link>
     </motion.div>
-  );
+  )
 }

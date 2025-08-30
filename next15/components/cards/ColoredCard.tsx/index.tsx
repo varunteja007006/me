@@ -1,11 +1,11 @@
-import "./index.css";
+import "./index.css"
 
 type Props = {
-  title?: string;
-  description?: string;
-  href?: string;
-  children?: React.ReactNode;
-};
+  title?: string
+  description?: string
+  href?: string
+  children?: React.ReactNode
+}
 
 export default function ColoredCard({
   title,
@@ -27,5 +27,5 @@ export default function ColoredCard({
         </a>
       )}
     </div>
-  );
+  )
 }

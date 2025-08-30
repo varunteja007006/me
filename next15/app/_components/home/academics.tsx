@@ -1,12 +1,12 @@
-import React from "react";
-import academicData from "@/app/_components/home/data/academic";
+import React from "react"
+import academicData from "@/app/_components/home/data/academic"
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/card"
 
 export default function Academics() {
   return (
@@ -14,14 +14,14 @@ export default function Academics() {
       <h3 className="text-xl font-semibold">Academics</h3>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {academicData.map((item) => {
+        {academicData.map(item => {
           if (!item.toShow) {
-            return null;
+            return null
           }
           return (
             <Card
               key={item.id}
-              className="flex flex-col justify-between h-full"
+              className="flex h-full flex-col justify-between"
             >
               <CardHeader>
                 <CardTitle className="text-lg">{item.course}</CardTitle>
@@ -33,9 +33,9 @@ export default function Academics() {
                 <p className="text-sm font-semibold">{item.score}</p>
               </CardFooter>
             </Card>
-          );
+          )
         })}
       </div>
     </section>
-  );
+  )
 }

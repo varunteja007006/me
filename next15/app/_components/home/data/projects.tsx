@@ -1,4 +1,4 @@
-import { generateId } from "@/lib/utils";
+import { generateId } from "@/lib/utils"
 import {
   jobtoday,
   jobtoday1,
@@ -34,10 +34,10 @@ import {
   budget2,
   budget3,
   budget4,
-} from "@/public";
+} from "@/public"
 
-export const COMPLETED = "Completed";
-export const INPROGRESS = "In Progress";
+export const COMPLETED = "Completed"
+export const INPROGRESS = "In Progress"
 
 const projectData = [
   // Completed Projects
@@ -231,6 +231,6 @@ const projectData = [
     toShow: true,
     projectStatus: INPROGRESS,
   },
-].sort((a, b) => b.projectStatus.localeCompare(a.projectStatus));
+].sort((a, b) => b.projectStatus.localeCompare(a.projectStatus))
 
-export default projectData;
+export default projectData

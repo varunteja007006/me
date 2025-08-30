@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
 
 import {
   NavigationMenu,
@@ -10,20 +10,20 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "@/components/ui/navigation-menu"
 
-import { SiGithub } from "react-icons/si";
+import { SiGithub } from "react-icons/si"
 
-import { ModeToggle } from "@/components/toggle-theme";
-import { miniProjects, stuffIBuilt } from "./data/nav";
-import Link from "next/link";
-import Icon from "./Icon";
+import { ModeToggle } from "@/components/toggle-theme"
+import { miniProjects, stuffIBuilt } from "./data/nav"
+import Link from "next/link"
+import Icon from "./Icon"
 
-const isMyPortfolio = process.env.NEXT_PUBLIC_PROJECT === "me";
+const isMyPortfolio = process.env.NEXT_PUBLIC_PROJECT === "me"
 
 export function Navbar() {
   return (
-    <div className="w-full flex-row hidden md:flex items-center justify-between gap-10 px-4 py-2">
+    <div className="hidden w-full flex-row items-center justify-between gap-10 px-4 py-2 md:flex">
       <Icon />
       {!isMyPortfolio && (
         <NavigationMenu className="flex-1" viewport={false}>
@@ -70,7 +70,7 @@ export function Navbar() {
               <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  {miniProjects.map((component) => (
+                  {miniProjects.map(component => (
                     <ListItem
                       key={component.title}
                       title={component.title}
@@ -87,7 +87,7 @@ export function Navbar() {
               <NavigationMenuContent>
                 <ul className="grid w-[300px] gap-4">
                   <li>
-                    {stuffIBuilt.map((component) => (
+                    {stuffIBuilt.map(component => (
                       <NavigationMenuLink asChild key={component.id}>
                         <Link href={component.href}>
                           <div className="font-medium">{component.title}</div>
@@ -108,7 +108,7 @@ export function Navbar() {
         <ModeToggle />
       </div>
     </div>
-  );
+  )
 }
 
 function ListItem({
@@ -118,9 +118,9 @@ function ListItem({
   githubLink,
   ...props
 }: React.ComponentPropsWithoutRef<"li"> & {
-  href: string;
-  description: string;
-  githubLink?: string;
+  href: string
+  description: string
+  githubLink?: string
 }) {
   return (
     <li {...props}>
@@ -140,5 +140,5 @@ function ListItem({
         </div>
       </NavigationMenuLink>
     </li>
-  );
+  )
 }

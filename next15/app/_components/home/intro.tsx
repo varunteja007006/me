@@ -1,29 +1,33 @@
-import React from "react";
+import React from "react"
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { CloudDownload } from "lucide-react";
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { CloudDownload } from "lucide-react"
 
-import Image from "next/image";
-import ContactIcons from "./contact-icons";
+import Image from "next/image"
+import ContactIcons from "./contact-icons"
 
 export default function Intro() {
   return (
     <section id="intro">
-      <Card className="space-y-4 min-h-[calc(100vh-10rem)] items-center flex flex-col justify-center">
-        <div className="flex flex-col lg:flex-row items-start gap-10 px-6">
-          <div className="flex flex-col gap-5 items-center w-full lg:w-1/3">
+      <Card className="flex min-h-[calc(100vh-10rem)] flex-col items-center justify-center space-y-4">
+        <div className="flex flex-col items-start gap-10 px-6 lg:flex-row">
+          <div className="flex w-full flex-col items-center gap-5 lg:w-1/3">
             <Image
               alt="profile"
               src={"/profile.webp"}
               width={400}
               height={400}
-              className="w-full h-auto rounded-lg"
+              className="h-auto w-full rounded-lg"
               unoptimized={true}
               priority={true}
             />
             <div>
-              <Button variant={"outline"} className="text-base font-bold" asChild>
+              <Button
+                variant={"outline"}
+                className="text-base font-bold"
+                asChild
+              >
                 <a download href="/resume_varun.pdf">
                   <CloudDownload /> Download Resume
                 </a>
@@ -31,7 +35,7 @@ export default function Intro() {
             </div>
           </div>
 
-          <div className="space-y-4 text-base leading-loose text-center lg:w-2/3">
+          <div className="space-y-4 text-center text-base leading-loose lg:w-2/3">
             <div>
               Hi 👋, I am a Software Engineer at Invest4Edu, an Ed-Fintech (as
               in both Education as well as Finance based) startup where I build
@@ -72,5 +76,5 @@ export default function Intro() {
         </div>
       </Card>
     </section>
-  );
+  )
 }

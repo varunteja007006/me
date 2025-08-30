@@ -1,4 +1,4 @@
-/* From Uiverse.io by Prince4fff */ 
+/* From Uiverse.io by Prince4fff */
 .card p {
   font-size: 17px;
   font-weight: 400;
@@ -171,7 +171,11 @@
   transform: skew(6deg);
   margin-right: -36px;
   align-items: start;
-  background-image: linear-gradient(-45deg, var(--secondary) 1%, var(--destructive) 100%);
+  background-image: linear-gradient(
+    -45deg,
+    var(--secondary) 1%,
+    var(--destructive) 100%
+  );
 }
 
 .card4 .go-arrow {

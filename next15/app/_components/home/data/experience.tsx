@@ -1,4 +1,4 @@
-import { generateId } from "@/lib/utils";
+import { generateId } from "@/lib/utils"
 
 const experienceData = [
   {
@@ -38,5 +38,5 @@ const experienceData = [
     toShow: true,
     current: false,
   },
-];
-export default experienceData;
+]
+export default experienceData

@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import React from "react";
+import React from "react"
 
 type Props = React.PropsWithChildren<{
-  className?: string;
-}>;
+  className?: string
+}>
 
 export default function BloomContainer({ children, className = "" }: Props) {
   // Bloom interactions removed — keep only the static pattern background
@@ -12,5 +12,5 @@ export default function BloomContainer({ children, className = "" }: Props) {
     <div className={`pattern-container ${className}`} role="presentation">
       {children}
     </div>
-  );
+  )
 }
