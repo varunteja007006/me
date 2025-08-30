@@ -1,5 +1,5 @@
 import React from "react";
-import experienceData from "@/app/_components/home/data/experienceData";
+import experienceData from "@/app/_components/home/data/experience";
 import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -9,7 +9,6 @@ import {
   format,
   parse,
 } from "date-fns";
-import _ from "lodash";
 
 function calcExp(date1: string, date2: string) {
   const resigningDate = new Date(parse(date1, "yyyy-MM-dd", new Date()));

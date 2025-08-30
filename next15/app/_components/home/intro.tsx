@@ -3,10 +3,11 @@ import React from "react";
 import ContactIcons from "./contact-icons";
 import { Button } from "@/components/ui/button";
 import { HiDownload } from "react-icons/hi";
+import { Card } from "@/components/ui/card";
 
 export default function Intro() {
   return (
-    <section
+    <Card
       id="intro"
       className="space-y-4 min-h-[calc(100vh-10rem)] items-center flex flex-col justify-center"
     >
@@ -71,6 +72,6 @@ export default function Intro() {
           </div>
         </div>
       </div>
-    </section>
+    </Card>
   );
 }

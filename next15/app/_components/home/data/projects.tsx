@@ -1,3 +1,4 @@
+import { generateId } from "@/lib/utils";
 import {
   jobtoday,
   jobtoday1,
@@ -41,7 +42,7 @@ export const INPROGRESS = "In Progress";
 const projectData = [
   // Completed Projects
   {
-    id: 1,
+    id: generateId(),
     project_title: `JobToday`,
     project_subtitle: `An awesome Job manager`,
     project_badges: ["Axios", "React JS", "Redux", "Recharts", "Tailwind CSS"],
@@ -59,7 +60,7 @@ const projectData = [
     projectStatus: COMPLETED,
   },
   {
-    id: 2,
+    id: generateId(),
     project_title: `Portfolio Website`,
     project_subtitle: `Not just my portfolio but my beautiful React 💙 playground`,
     project_badges: [
@@ -84,7 +85,7 @@ const projectData = [
     projectStatus: COMPLETED,
   },
   {
-    id: 3,
+    id: generateId(),
     project_title: `Sports Management Website`,
     project_subtitle: ``,
     project_badges: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
@@ -105,7 +106,7 @@ const projectData = [
     projectStatus: COMPLETED,
   },
   {
-    id: 4,
+    id: generateId(),
     project_title: `Fit App`,
     project_subtitle: ``,
     project_badges: [
@@ -131,7 +132,7 @@ const projectData = [
     projectStatus: COMPLETED,
   },
   {
-    id: 5,
+    id: generateId(),
     project_title: `Twitter Sentiment Analysis`,
     project_subtitle: ``,
     project_badges: [
@@ -161,7 +162,7 @@ const projectData = [
     projectStatus: COMPLETED,
   },
   {
-    id: 6,
+    id: generateId(),
     project_title: `Collabs`,
     project_subtitle: ``,
     project_badges: [
@@ -182,7 +183,7 @@ const projectData = [
     projectStatus: COMPLETED,
   },
   {
-    id: 7,
+    id: generateId(),
     project_title: `Budget`,
     project_subtitle: ``,
     project_badges: [
@@ -207,7 +208,7 @@ const projectData = [
 
   // In Progress Projects
   {
-    id: 8,
+    id: generateId(),
     project_title: `open_templates`,
     project_subtitle: `My experimental project 🔬 to dive deep into the next js and django frameworks. 
     To understand some core concepts like middleware, server actions, web sockets, etc...`,
@@ -230,6 +231,6 @@ const projectData = [
     toShow: true,
     projectStatus: INPROGRESS,
   },
-].sort((a, b) => b.id - a.id);
+].sort((a, b) => b.projectStatus.localeCompare(a.projectStatus));
 
 export default projectData;

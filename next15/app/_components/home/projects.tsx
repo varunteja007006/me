@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import projectData, { COMPLETED } from "./data/projectData";
 import {
   Card,
   CardContent,
@@ -11,12 +10,16 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 import { FaGithub } from "react-icons/fa6";
 import { GrDeploy } from "react-icons/gr";
 
-import MyTooltip from "@/components/custom/MyTooltip";
-import { BorderBeam } from "@/components/custom/border-beam-card";
+import projectData, { COMPLETED } from "./data/projects";
 
 const ProjectLink = ({
   URL,
@@ -27,25 +30,31 @@ const ProjectLink = ({
 }) => {
   if (type === "website") {
     return (
-      <MyTooltip text="Go to deployed website">
-        <Button size={"icon"} variant={"outline"} asChild>
-          <a href={URL}>
-            <GrDeploy className="w-4 h-4" />
-          </a>
-        </Button>
-      </MyTooltip>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button size={"icon"} variant={"outline"} asChild>
+            <a href={URL}>
+              <GrDeploy className="w-4 h-4" />
+            </a>
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>Go to deployed website</TooltipContent>
+      </Tooltip>
     );
   }
 
   if (type === "github") {
     return (
-      <MyTooltip text="Go to github repository">
-        <Button size={"icon"} variant={"outline"} asChild>
-          <a href={URL}>
-            <FaGithub className="w-4 h-4" />
-          </a>
-        </Button>
-      </MyTooltip>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button size={"icon"} variant={"outline"} asChild>
+            <a href={URL}>
+              <FaGithub className="w-4 h-4" />
+            </a>
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>Go to github repository</TooltipContent>
+      </Tooltip>
     );
   }
   return null;
@@ -72,8 +81,8 @@ export default function Projects() {
                         <Badge
                           variant={
                             item.projectStatus === COMPLETED
-                              ? "success"
-                              : "warning"
+                              ? "default"
+                              : "outline"
                           }
                         >
                           {item.projectStatus}
@@ -112,12 +121,6 @@ export default function Projects() {
                   </CardFooter>
                 </div>
               </div>
-              <BorderBeam
-                borderWidth={2}
-                anchor={100}
-                duration={10}
-                delay={index * 0.25}
-              />
             </Card>
           );
         })}

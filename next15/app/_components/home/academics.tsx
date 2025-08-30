@@ -1,5 +1,5 @@
 import React from "react";
-import academicData from "@/app/_components/home/data/academicData";
+import academicData from "@/app/_components/home/data/academic";
 import {
   Card,
   CardDescription,

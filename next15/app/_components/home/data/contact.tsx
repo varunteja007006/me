@@ -3,10 +3,11 @@ import { FiPhone } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { SiGithub } from "react-icons/si";
 import { ImLinkedin2 } from "react-icons/im";
+import { generateId } from "@/lib/utils";
 
 const contactData = [
   {
-    id: 1,
+    id: generateId(),
     contact_type: "email",
     contact_href: "mailto:varunteja007006@gmail.com",
     contact_icon: AiOutlineMail,
@@ -14,7 +15,7 @@ const contactData = [
     contact_value: "varunteja007006@gmail.com",
   },
   {
-    id: 2,
+    id: generateId(),
     contact_type: "phone",
     contact_href: "tel:+917893798770",
     contact_icon: FiPhone,
@@ -22,7 +23,7 @@ const contactData = [
     contact_value: "+91 7893798770",
   },
   {
-    id: 5,
+    id: generateId(),
     contact_type: "address",
     contact_href:
       "https://www.google.com/maps?s=web&vet=12ahUKEwjTg4fwpYqCAxUSs1YBHZ3YC0sQ5OUKegQIDRAO..i&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=Kefb-bEhvMs7MRazges72KJm&daddr=796Q%2BX6J,+Bus+Stand+Colony,+Madhura+Nagar,+Shamshabad,+Hyderabad,+Telangana+501218",
@@ -31,7 +32,7 @@ const contactData = [
     contact_value: "Shamshabad, Hyderabad, Pincode - 501218",
   },
   {
-    id: 3,
+    id: generateId(),
     contact_type: "linkedIn",
     contact_href: "https://www.linkedin.com/in/varunteja007006",
     contact_icon: ImLinkedin2,
@@ -39,7 +40,7 @@ const contactData = [
     contact_value: "https://www.linkedin.com/in/varunteja007006",
   },
   {
-    id: 4,
+    id: generateId(),
     contact_type: "github",
     contact_href: "https://github.com/varunteja007006",
     contact_icon: SiGithub,
