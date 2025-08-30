@@ -8,7 +8,6 @@ import { Toaster } from "@/components/ui/sonner";
 import { Footer } from "./_components/footer/Footer";
 import { Navbar } from "./_components/nav/Navbar";
 import BloomContainer from "@/components/bloom-container";
-import PWARegister from "@/components/pwa-register";
 
 const comicNeue = Comic_Neue({ weight: "400", subsets: ["latin"] });
 
@@ -39,7 +38,6 @@ export default function RootLayout({
                 <Footer />
               </div>
             </BloomContainer>
-            <PWARegister />
             <Toaster />
           </ThemeProvider>
         </Tanstack>
