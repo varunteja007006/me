@@ -22,7 +22,7 @@ export default function Certifications() {
                 <CardTitle className="text-md">
                   {item.certificate_name}
                 </CardTitle>
-                <CardDescription className="self-end ">
+                <CardDescription className="self-end">
                   - {item.certificate_provider}
                 </CardDescription>
               </CardHeader>

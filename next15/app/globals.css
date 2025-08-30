@@ -210,9 +210,8 @@
   }
 }
 
-/* Pattern background with subtle bloom-on-hover
-   - Default (light) styles are the base rules
-   - Dark mode overrides are applied under the .dark root class
+/* Pattern background (static — bloom removed)
+   - Keeps the tiled grid pattern for light and dark themes
 */
 .pattern-container {
   width: 100%;
@@ -220,67 +219,41 @@
   /* light-mode defaults */
   --pattern-bg: #fbfbfd; /* light surface */
   --grid-color: rgba(0, 0, 0, 0.06);
-  --bloom-bg: radial-gradient(circle at center, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.03) 30%, rgba(0,0,0,0) 60%);
-  --bloom-blur: 30px;
 
   background-color: var(--pattern-bg);
-  background-image: linear-gradient(0deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent),
-    linear-gradient(90deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent);
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--grid-color) 25%,
+      var(--grid-color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--grid-color) 75%,
+      var(--grid-color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--grid-color) 25%,
+      var(--grid-color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--grid-color) 75%,
+      var(--grid-color) 76%,
+      transparent 77%,
+      transparent
+    );
   background-size: 55px 55px;
   position: relative;
   overflow: hidden;
-  isolation: isolate; /* keep blend effects local */
+  isolation: isolate;
 }
 
-/* Default: no bloom in light mode */
-.pattern-container::before {
-  content: "";
-  position: absolute;
-  left: calc(var(--x, 50%) - 220px);
-  top: calc(var(--y, 50%) - 220px);
-  width: 440px;
-  height: 440px;
-  pointer-events: none;
-  display: none; /* hide bloom in light mode */
-}
-
-/* Hover state and bloom are only enabled for dark theme (below) */
-
-/* Dark theme overrides (keeps pattern but switches colors and bloom blend) */
+/* Dark theme overrides: keep pattern but switch colors */
 .dark .pattern-container {
   --pattern-bg: #191a1a;
   --grid-color: rgba(255, 255, 255, 0.12);
-  --bloom-bg: radial-gradient(circle at center, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 30%, rgba(255,255,255,0) 60%);
-  --bloom-blur: 40px;
   background-color: var(--pattern-bg);
-}
-
-.dark .pattern-container::before {
-  /* enable bloom in dark mode */
-  content: "";
-  position: absolute;
-  left: calc(var(--x, 50%) - 220px);
-  top: calc(var(--y, 50%) - 220px);
-  width: 440px;
-  height: 440px;
-  pointer-events: none;
-  background: var(--bloom-bg);
-  mix-blend-mode: screen;
-  filter: blur(var(--bloom-blur));
-  opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 240ms cubic-bezier(.2,.8,.2,1), transform 240ms cubic-bezier(.2,.8,.2,1), left 120ms ease, top 120ms ease;
-}
-
-.dark .pattern-container.hovered::before {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .pattern-container::before {
-    transition: none;
-    filter: blur(12px);
-  }
 }

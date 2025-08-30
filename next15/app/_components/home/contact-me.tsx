@@ -14,10 +14,10 @@ export default function ContactMe() {
             {contactData.map((item) => {
               return (
                 <TableRow key={item.id} className="border-none ">
-                  <TableCell className="font-medium capitalize">
+                  <TableCell className="font-semibold capitalize">
                     {item.contact_type}
                   </TableCell>
-                  <TableCell>
+                  <TableCell className="font-semibold">
                     <a href={item.contact_href}>{item.contact_value}</a>
                   </TableCell>
                 </TableRow>

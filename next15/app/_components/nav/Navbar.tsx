@@ -21,7 +21,7 @@ import Icon from "./Icon";
 
 export function Navbar() {
   return (
-    <div className="w-full flex-row hidden md:flex items-center justify-between gap-10 px-4 py-2 text-primary">
+    <div className="w-full flex-row hidden md:flex items-center justify-between gap-10 px-4 py-2">
       <Icon />
       <NavigationMenu className="flex-1" viewport={false}>
         <NavigationMenuList>

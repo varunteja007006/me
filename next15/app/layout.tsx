@@ -31,13 +31,13 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="min-h-screen flex flex-col w-full">
-              <Navbar />
-              <BloomContainer>
+            <BloomContainer>
+              <div className="min-h-screen flex flex-col w-full">
+                <Navbar />
                 <div className="flex-1 p-4">{children}</div>
-              </BloomContainer>
-              <Footer />
-            </div>
+                <Footer />
+              </div>
+            </BloomContainer>
             <Toaster />
           </ThemeProvider>
         </Tanstack>

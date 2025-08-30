@@ -31,7 +31,6 @@ export default function ContactIcons({
             <TooltipTrigger asChild>
               <Button
                 size={"icon"}
-                variant={"outline"}
                 className={cn(
                   "rounded-full ring-1 shadow",
                   className
