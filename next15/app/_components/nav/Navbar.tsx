@@ -9,7 +9,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
 import { SiGithub } from "react-icons/si"
@@ -19,7 +18,7 @@ import { miniProjects, stuffIBuilt } from "./data/nav"
 import Link from "next/link"
 import Icon from "./Icon"
 
-const isMyPortfolio = process.env.NEXT_PUBLIC_PROJECT === "me"
+const isMyPortfolio = process.env.NEXT_PUBLIC_PROJECT === "me" || process.env.PROJECT === "me"
 
 export function Navbar() {
   return (
