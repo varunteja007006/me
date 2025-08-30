@@ -23,7 +23,7 @@ export default function Intro() {
               priority={true}
             />
             <div>
-              <Button variant={"default"} className="text-lg font-bold" asChild>
+              <Button variant={"outline"} className="text-base font-bold" asChild>
                 <a download href="/resume_varun.pdf">
                   <CloudDownload /> Download Resume
                 </a>
