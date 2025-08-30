@@ -1,16 +1,18 @@
-import Image from "next/image";
 import React from "react";
-import ContactIcons from "./contact-icons";
+
 import { Button } from "@/components/ui/button";
-import { HiDownload } from "react-icons/hi";
 import { Card } from "@/components/ui/card";
+import { CloudDownload } from "lucide-react";
+
+import Image from "next/image";
+import ContactIcons from "./contact-icons";
 
 export default function Intro() {
   return (
     <section id="intro">
       <Card className="space-y-4 min-h-[calc(100vh-10rem)] items-center flex flex-col justify-center">
-        <div className="flex flex-row items-start gap-10 px-6">
-          <div className="flex flex-col gap-5 items-center">
+        <div className="flex flex-col lg:flex-row items-start gap-10 px-6">
+          <div className="flex flex-col gap-5 items-center w-full lg:w-1/3">
             <Image
               alt="profile"
               src={"/profile.webp"}
@@ -21,19 +23,15 @@ export default function Intro() {
               priority={true}
             />
             <div>
-              <Button
-                variant={"outline"}
-                className="text-lg font-bold ring-1 dark:ring-purple-300"
-                asChild
-              >
+              <Button variant={"default"} className="text-lg font-bold" asChild>
                 <a download href="/resume_varun.pdf">
-                  Download my resume <HiDownload className="ml-2 w-4 h-4" />
+                  <CloudDownload /> Download Resume
                 </a>
               </Button>
             </div>
           </div>
 
-          <div className="space-y-4 text-base leading-loose text-center">
+          <div className="space-y-4 text-base leading-loose text-center lg:w-2/3">
             <div>
               Hi 👋, I am a Software Engineer at Invest4Edu, an Ed-Fintech (as
               in both Education as well as Finance based) startup where I build

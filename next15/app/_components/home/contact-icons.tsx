@@ -32,7 +32,7 @@ export default function ContactIcons({
               <Button
                 size={"icon"}
                 className={cn(
-                  "rounded-full ring-1 shadow",
+                  "rounded-full ring-1 shadow cursor-pointer",
                   className
                 )}
                 onClick={() => handleCopy(item.contact_value)}

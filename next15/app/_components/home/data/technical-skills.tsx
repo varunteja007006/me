@@ -32,6 +32,11 @@ import {
   SiPostgresql,
   SiDbeaver,
   SiHoppscotch,
+  SiGithubcopilot,
+  SiClaude ,
+  SiGooglegemini ,
+  SiOpenai ,
+  SiJest 
 } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { GiTortoise } from "react-icons/gi";
@@ -41,6 +46,23 @@ import { DiVisualstudio } from "react-icons/di";
 // React Native, Expo, Electron
 
 const technicalSkillsData = {
+  frameworks: {
+    label: "Frameworks",
+    skillList: [
+      { name: "Next JS", icon: SiNextdotjs, toShow: true },
+      { name: "MERN Stack", icon: SiMdnwebdocs, toShow: true },
+      { name: "Django Web Framework", icon: SiDjango, toShow: true },
+    ],
+  },
+  "AI Tools": {
+    label: "AI Tools",
+    skillList: [
+      { name: "Open AI", icon: SiOpenai  , toShow: true },
+      { name: "Co-Pilot", icon: SiGithubcopilot, toShow: true },
+      { name: "Claude", icon: SiClaude , toShow: true },
+      { name: "Gemini", icon: SiGooglegemini , toShow: true },
+    ],
+  },
   ProgrammingLanguages: {
     label: "Programming Languages / Technologies",
     skillList: [
@@ -58,14 +80,7 @@ const technicalSkillsData = {
       { name: "Bootstrap CSS", icon: FaBootstrap, toShow: true },
       { name: "SCSS", icon: BsFiletypeScss, toShow: false },
       { name: "PHP", icon: FaPhp, toShow: false },
-    ],
-  },
-  frameworks: {
-    label: "Frameworks",
-    skillList: [
-      { name: "Next JS", icon: SiNextdotjs, toShow: true },
-      { name: "MERN Stack", icon: SiMdnwebdocs, toShow: true },
-      { name: "Django Web Framework", icon: SiDjango, toShow: true },
+      { name: "Jest", icon: SiJest, toShow: true },
     ],
   },
   platforms: {

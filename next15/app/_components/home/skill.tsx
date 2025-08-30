@@ -26,7 +26,7 @@ export default function Skills() {
                   }
                   return (
                     <Card key={item.name}>
-                      <div className="flex gap-5 items-center p-5">
+                      <div className="flex gap-5 items-center px-5">
                         <item.icon className="size-12" />
                         <CardTitle className="text-base">{item.name}</CardTitle>
                       </div>
@@ -49,7 +49,7 @@ export default function Skills() {
             }
             return (
               <Card key={item.id}>
-                <div className="flex gap-5 items-center p-5">
+                <div className="flex gap-5 items-center px-6">
                   <item.icon className="size-12" />
                   <CardTitle className="text-base">{item.name}</CardTitle>
                 </div>
