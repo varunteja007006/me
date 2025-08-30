@@ -8,6 +8,7 @@ import {
   FaBootstrap,
   FaPhp,
   FaAws,
+  FaDocker,
 } from "react-icons/fa";
 import {
   SiJavascript,
@@ -27,21 +28,27 @@ import {
   SiGooglecloud,
   SiNextdotjs,
   SiMui,
+  SiBruno,
+  SiPostgresql,
+  SiDbeaver,
+  SiHoppscotch,
 } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { GiTortoise } from "react-icons/gi";
-import { RiNextjsLine } from "react-icons/ri";
 import { DiVisualstudio } from "react-icons/di";
+
+// Go, Rust, C
+// React Native, Expo, Electron
 
 const technicalSkillsData = {
   ProgrammingLanguages: {
     label: "Programming Languages / Technologies",
     skillList: [
-      { name: "Next JS", icon: SiNextdotjs, toShow: true },
       { name: "React JS", icon: FaReact, toShow: true },
       { name: "Node JS", icon: FaNodeJs, toShow: true },
       { name: "JavaScript", icon: SiJavascript, toShow: true },
       { name: "MySQL", icon: SiMysql, toShow: true },
+      { name: "PostgreSQL", icon: SiPostgresql, toShow: true },
       { name: "MongoDB", icon: SiMongodb, toShow: true },
       { name: "Python", icon: FaPython, toShow: true },
       { name: "HTML", icon: FaHtml5, toShow: true },
@@ -56,7 +63,7 @@ const technicalSkillsData = {
   frameworks: {
     label: "Frameworks",
     skillList: [
-      { name: "Next JS", icon: RiNextjsLine, toShow: true },
+      { name: "Next JS", icon: SiNextdotjs, toShow: true },
       { name: "MERN Stack", icon: SiMdnwebdocs, toShow: true },
       { name: "Django Web Framework", icon: SiDjango, toShow: true },
     ],
@@ -64,22 +71,26 @@ const technicalSkillsData = {
   platforms: {
     label: "Platforms",
     skillList: [
-      { name: "AWS", icon: FaAws, toShow: true },
+      { name: "Railway", icon: SiRailway, toShow: true },
       { name: "Google Cloud", icon: SiGooglecloud, toShow: true },
       { name: "Netlify", icon: SiNetlify, toShow: true },
+      { name: "AWS", icon: FaAws, toShow: true },
       { name: "Heroku", icon: SiHeroku, toShow: true },
-      { name: "Railway", icon: SiRailway, toShow: true },
     ],
   },
   tools: {
     label: "Tools",
     skillList: [
+      { name: "Docker", icon: FaDocker, toShow: true },
+      { name: "DBeaver", icon: SiDbeaver, toShow: true },
       { name: "GitHub", icon: SiGithub, toShow: true },
       { name: "VS Code", icon: DiVisualstudio, toShow: true },
+      { name: "SonarQube", icon: SiSonarqube, toShow: true },
       { name: "Postman", icon: SiPostman, toShow: true },
+      { name: "Bruno", icon: SiBruno, toShow: true },
+      { name: "Hoppscotch", icon: SiHoppscotch, toShow: true },
       { name: "TortoiseSVN", icon: GiTortoise, toShow: true },
       { name: "Jenkins", icon: SiJenkins, toShow: true },
-      { name: "SonarQube", icon: SiSonarqube, toShow: true },
     ],
   },
   os: {
