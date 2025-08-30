@@ -1,30 +1,30 @@
-import React from "react";
-import experienceData from "@/app/_components/home/data/experience";
-import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import React from "react"
+import experienceData from "@/app/_components/home/data/experience"
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import {
   addYears,
   differenceInMonths,
   differenceInYears,
   format,
   parse,
-} from "date-fns";
+} from "date-fns"
 
 function calcExp(date1: string, date2: string) {
-  const resigningDate = new Date(parse(date1, "yyyy-MM-dd", new Date()));
-  const joiningDate = new Date(parse(date2, "yyyy-MM-dd", new Date()));
+  const resigningDate = new Date(parse(date1, "yyyy-MM-dd", new Date()))
+  const joiningDate = new Date(parse(date2, "yyyy-MM-dd", new Date()))
 
   // Calculate the difference in years
-  let years = differenceInYears(resigningDate, joiningDate);
+  let years = differenceInYears(resigningDate, joiningDate)
   // Calculate the remaining months after accounting for the years
-  let months = differenceInMonths(resigningDate, addYears(joiningDate, years));
+  let months = differenceInMonths(resigningDate, addYears(joiningDate, years))
 
   // Handle the case where months are negative
   if (months < 0) {
-    years -= 1;
-    months += 12;
+    years -= 1
+    months += 12
   }
-  return `${years}.${months}`;
+  return `${years}.${months}`
 }
 
 export default function Experience() {
@@ -32,15 +32,15 @@ export default function Experience() {
     <section id="experience" className="space-y-4">
       <h3 className="text-xl font-semibold">Experience</h3>
       <div className="grid grid-cols-1 gap-4">
-        {experienceData.map((item) => {
+        {experienceData.map(item => {
           if (!item.toShow) {
-            return null;
+            return null
           }
 
           return (
             <Card key={item.id}>
               <CardHeader>
-                <CardTitle className="flex gap-3 items-center text-lg">
+                <CardTitle className="flex items-center gap-3 text-lg">
                   {item.jobTitle}{" "}
                   {item.current && (
                     <Badge
@@ -76,7 +76,7 @@ export default function Experience() {
                     <p className="mb-2 text-base font-semibold text-black dark:text-white">
                       Job Description:
                     </p>
-                    <ul className="space-y-3 list-disc list-inside text-black dark:text-white">
+                    <ul className="list-inside list-disc space-y-3 text-black dark:text-white">
                       {item.jobDescription.map((item, index) => (
                         <li key={index} className="text-sm">
                           {item}
@@ -90,9 +90,9 @@ export default function Experience() {
                 {item.workingFrom} {item.workingTill && `- ${item.workingTill}`}
               </CardFooter>
             </Card>
-          );
+          )
         })}
       </div>
     </section>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import { generateId } from "@/lib/utils";
+import { generateId } from "@/lib/utils"
 
 const academicData = [
   {
@@ -26,5 +26,5 @@ const academicData = [
     score: "CGPA 9.8",
     toShow: true,
   },
-];
-export default academicData;
+]
+export default academicData

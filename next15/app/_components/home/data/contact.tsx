@@ -1,9 +1,9 @@
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { FiPhone } from "react-icons/fi";
-import { AiOutlineMail } from "react-icons/ai";
-import { SiGithub } from "react-icons/si";
-import { ImLinkedin2 } from "react-icons/im";
-import { generateId } from "@/lib/utils";
+import { HiOutlineLocationMarker } from "react-icons/hi"
+import { FiPhone } from "react-icons/fi"
+import { AiOutlineMail } from "react-icons/ai"
+import { SiGithub } from "react-icons/si"
+import { ImLinkedin2 } from "react-icons/im"
+import { generateId } from "@/lib/utils"
 
 const contactData = [
   {
@@ -47,6 +47,6 @@ const contactData = [
     icon_style: "text-2xl",
     contact_value: "https://github.com/varunteja007006",
   },
-];
+]
 
-export default contactData;
+export default contactData

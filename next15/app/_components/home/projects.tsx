@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 import {
   Card,
@@ -7,26 +7,26 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip"
 
-import { FaGithub } from "react-icons/fa6";
-import { GrDeploy } from "react-icons/gr";
+import { FaGithub } from "react-icons/fa6"
+import { GrDeploy } from "react-icons/gr"
 
-import projectData, { COMPLETED } from "./data/projects";
+import projectData, { COMPLETED } from "./data/projects"
 
 const ProjectLink = ({
   URL,
   type,
 }: {
-  URL: string;
-  type: "github" | "website";
+  URL: string
+  type: "github" | "website"
 }) => {
   if (type === "website") {
     return (
@@ -34,13 +34,13 @@ const ProjectLink = ({
         <TooltipTrigger asChild>
           <Button size={"icon"} variant={"outline"} asChild>
             <a href={URL}>
-              <GrDeploy className="w-4 h-4" />
+              <GrDeploy className="h-4 w-4" />
             </a>
           </Button>
         </TooltipTrigger>
         <TooltipContent>Go to deployed website</TooltipContent>
       </Tooltip>
-    );
+    )
   }
 
   if (type === "github") {
@@ -49,16 +49,16 @@ const ProjectLink = ({
         <TooltipTrigger asChild>
           <Button size={"icon"} variant={"outline"} asChild>
             <a href={URL}>
-              <FaGithub className="w-4 h-4" />
+              <FaGithub className="h-4 w-4" />
             </a>
           </Button>
         </TooltipTrigger>
         <TooltipContent>Go to github repository</TooltipContent>
       </Tooltip>
-    );
+    )
   }
-  return null;
-};
+  return null
+}
 
 export default function Projects() {
   return (
@@ -68,7 +68,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 gap-5">
         {projectData.map((item, index) => {
           if (!item.toShow) {
-            return null;
+            return null
           }
           return (
             <Card key={item.id} className="relative">
@@ -76,7 +76,7 @@ export default function Projects() {
                 <div className="col-span-2">
                   <CardHeader className="pb-3">
                     <CardTitle>
-                      <span className="flex flex-wrap gap-2 justify-between items-center w-full">
+                      <span className="flex w-full flex-wrap items-center justify-between gap-2">
                         {item.project_title}
                         <Badge
                           variant={
@@ -92,23 +92,23 @@ export default function Projects() {
                     <CardDescription className="py-2">
                       {item.project_subtitle}
                     </CardDescription>
-                    <div className="flex flex-wrap gap-2 justify-start items-center">
-                      {item.project_badges.map((item) => {
+                    <div className="flex flex-wrap items-center justify-start gap-2">
+                      {item.project_badges.map(item => {
                         return (
                           <Badge
                             variant={"outline"}
                             key={item}
-                            className="ring-1 ring-blue-400  dark:ring-purple-600"
+                            className="ring-1 ring-blue-400 dark:ring-purple-600"
                           >
                             {item}
                           </Badge>
-                        );
+                        )
                       })}
                     </div>
                   </CardHeader>
-                  <CardContent className="leading-loose ">
+                  <CardContent className="leading-loose">
                     {item.project_description.map((item, index) => {
-                      return <p key={index}>{item}</p>;
+                      return <p key={index}>{item}</p>
                     })}
                   </CardContent>
                   <CardFooter className="gap-5">
@@ -122,9 +122,9 @@ export default function Projects() {
                 </div>
               </div>
             </Card>
-          );
+          )
         })}
       </div>
     </section>
-  );
+  )
 }

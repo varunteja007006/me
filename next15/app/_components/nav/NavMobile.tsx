@@ -1,16 +1,16 @@
-import * as React from "react";
+import * as React from "react"
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { cn } from "@/lib/utils";
-import { ModeToggle } from "@/components/toggle-theme";
+} from "@/components/ui/sheet"
+import { GiHamburgerMenu } from "react-icons/gi"
+import { Button } from "@/components/ui/button"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { cn } from "@/lib/utils"
+import { ModeToggle } from "@/components/toggle-theme"
 
 export default function NavMobile() {
   return (
@@ -22,16 +22,16 @@ export default function NavMobile() {
           size={"icon"}
           aria-label="Menu"
         >
-          <GiHamburgerMenu className="w-4 h-4" />
+          <GiHamburgerMenu className="h-4 w-4" />
         </Button>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Menu</SheetTitle>
         </SheetHeader>
-        <div className="flex flex-col gap-2 items-start p-4">
-          <ScrollArea className="flex-1 h-full w-full mb-5">
-            <ul className="grid gap-3 pl-0 p-3 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+        <div className="flex flex-col items-start gap-2 p-4">
+          <ScrollArea className="mb-5 h-full w-full flex-1">
+            <ul className="grid gap-3 p-3 pl-0 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {/* <ListItem
                 key={"React"}
                 title={"React"}
@@ -53,13 +53,13 @@ export default function NavMobile() {
               ))} */}
             </ul>
           </ScrollArea>
-          <div className="flex flex-row justify-end w-full">
+          <div className="flex w-full flex-row justify-end">
             <ModeToggle />
           </div>
         </div>
       </SheetContent>
     </Sheet>
-  );
+  )
 }
 
 const ListItem = React.forwardRef<
@@ -71,17 +71,17 @@ const ListItem = React.forwardRef<
       <a
         ref={ref}
         className={cn(
-          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none",
           className
         )}
         {...props}
       >
-        <div className="text-sm font-medium leading-none">{title}</div>
-        <p className="text-sm leading-snug line-clamp-2 text-muted-foreground">
+        <div className="text-sm leading-none font-medium">{title}</div>
+        <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
           {children}
         </p>
       </a>
     </li>
-  );
-});
-ListItem.displayName = "ListItem";
+  )
+})
+ListItem.displayName = "ListItem"
