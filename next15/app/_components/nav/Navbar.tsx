@@ -18,7 +18,8 @@ import { miniProjects, stuffIBuilt } from "./data/nav"
 import Link from "next/link"
 import Icon from "./Icon"
 
-const isMyPortfolio = process.env.NEXT_PUBLIC_PROJECT === "me" || process.env.PROJECT === "me"
+const isMyPortfolio =
+  process.env.NEXT_PUBLIC_PROJECT === "me" || process.env.PROJECT === "me"
 
 export function Navbar() {
   return (
