@@ -21,6 +21,7 @@ const eslintConfig = [
 
       // custom exclusions
       "components/combo-box.tsx",
+      "components/pwa-register.tsx",
     ],
   },
 ];

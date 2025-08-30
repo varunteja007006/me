@@ -33,14 +33,14 @@ import {
   SiDbeaver,
   SiHoppscotch,
   SiGithubcopilot,
-  SiClaude ,
-  SiGooglegemini ,
-  SiOpenai ,
-  SiJest 
+  SiClaude,
+  SiGooglegemini,
+  SiOpenai,
+  SiJest,
 } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { GiTortoise } from "react-icons/gi";
-import { DiVisualstudio } from "react-icons/di";
+import { DiVisualstudio, DiMsqlServer } from "react-icons/di";
 
 // Go, Rust, C
 // React Native, Expo, Electron
@@ -57,10 +57,10 @@ const technicalSkillsData = {
   "AI Tools": {
     label: "AI Tools",
     skillList: [
-      { name: "Open AI", icon: SiOpenai  , toShow: true },
+      { name: "Open AI", icon: SiOpenai, toShow: true },
       { name: "Co-Pilot", icon: SiGithubcopilot, toShow: true },
-      { name: "Claude", icon: SiClaude , toShow: true },
-      { name: "Gemini", icon: SiGooglegemini , toShow: true },
+      { name: "Claude", icon: SiClaude, toShow: true },
+      { name: "Gemini", icon: SiGooglegemini, toShow: true },
     ],
   },
   ProgrammingLanguages: {
@@ -69,8 +69,9 @@ const technicalSkillsData = {
       { name: "React JS", icon: FaReact, toShow: true },
       { name: "Node JS", icon: FaNodeJs, toShow: true },
       { name: "JavaScript", icon: SiJavascript, toShow: true },
-      { name: "MySQL", icon: SiMysql, toShow: true },
       { name: "PostgreSQL", icon: SiPostgresql, toShow: true },
+      { name: "MSSQL", icon: DiMsqlServer, toShow: true },
+      { name: "MySQL", icon: SiMysql, toShow: true },
       { name: "MongoDB", icon: SiMongodb, toShow: true },
       { name: "Python", icon: FaPython, toShow: true },
       { name: "HTML", icon: FaHtml5, toShow: true },
