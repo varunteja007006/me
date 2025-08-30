@@ -21,9 +21,9 @@ import Icon from "./Icon";
 
 export function Navbar() {
   return (
-    <div className="w-full flex-row hidden md:flex items-center justify-between px-10 py-2 text-primary">
+    <div className="w-full flex-row hidden md:flex items-center justify-between gap-10 px-4 py-2 text-primary">
       <Icon />
-      <NavigationMenu viewport={false}>
+      <NavigationMenu className="flex-1" viewport={false}>
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Home</NavigationMenuTrigger>
@@ -97,18 +97,11 @@ export function Navbar() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={navigationMenuTriggerStyle()}
-            >
-              <ModeToggle />
-            </NavigationMenuLink>
-          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <div></div>
+      <div>
+        <ModeToggle />
+      </div>
     </div>
   );
 }
