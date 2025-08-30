@@ -42,14 +42,7 @@ export default function Experience() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-lg">
                   {item.jobTitle}{" "}
-                  {item.current && (
-                    <Badge
-                      variant="outline"
-                      className="ring-1 ring-blue-400 dark:ring-purple-600"
-                    >
-                      Current
-                    </Badge>
-                  )}
+                  {item.current && <Badge variant="default">Current</Badge>}
                   {item.current ? (
                     <Badge variant="outline">
                       Exp:{" "}

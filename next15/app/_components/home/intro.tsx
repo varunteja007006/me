@@ -37,36 +37,25 @@ export default function Intro() {
 
           <div className="space-y-4 text-center text-base leading-loose lg:w-2/3">
             <div>
-              Hi 👋, I am a Software Engineer at Invest4Edu, an Ed-Fintech (as
-              in both Education as well as Finance based) startup where I build
-              web apps using{" "}
-              <strong>Next.js, React, Node.js, and MSSQL.</strong>
+              {`Hi 👋, I’m Varun, a Senior Software Engineer at Renault Nissan
+            Technology and Business Center India (RNTBCI). I build full-stack
+            applications that bring 🤖 AI-powered insights to supplier risk
+            assessment, procurement, and sustainability—helping businesses cut
+            through paperwork and make better, data-driven decisions. `}
+            </div>
+
+            <div>
+              {`My core stack is Next.js, React, and Tailwind CSS on the frontend,
+              and NestJS, Postgres, and Java on the backend. I also have
+              hands-on experience with Node.js, Express, MongoDB, and MSSQL,
+              giving me a strong foundation in both SQL and NoSQL systems. I’m
+              passionate about scalable architecture, clean code, and continuous
+              learning.`}
             </div>
             <div>
-              My tech stack for the frontend includes{" "}
-              <strong>Next.js, React.js, and Tailwind CSS</strong>. For the
-              backend, I use{" "}
-              <strong>Node.js, Express.js, MSSQL and MongoDB</strong> also I
-              have a strong understanding of both <strong>SQL and NoSQL</strong>
-              . I started my journey with basics of{" "}
-              <strong>HTML, CSS, SCSS, a little of Javascript, PHP and</strong>{" "}
-              also <strong>Django</strong> (<strong>Python</strong> based web
-              framework). Now I have a good understanding of them especially
-              Javascript 😉.
-            </div>
-            <div>
-              I am passionate about learning and keep my skills updated.
-              Currently I am learning <strong>Django-Rest-Framework</strong>.
-              Also plan to learn <strong>Go, Rust, and C</strong>. (Fascinated
-              about the low level stuff ✨){""}
-            </div>
-            <div>
-              I also use various tools for productivity, code management and
-              benchmarking like{" "}
-              <strong>Git, VS Code, Postman, SonarQube, and Jenkins</strong>.
-            </div>
-            <div>
-              I am open to new opportunities so feel free to reach out to me 🤝.
+              {`Currently, I’m sharpening my skills in Java, MCP servers, and vibe
+              coding, while planning to explore Go, Rust, and C to get closer to
+              the low-level systems that fascinate me.`}
             </div>
             <div className="font-semibold">- Varun Teja</div>
             <div>

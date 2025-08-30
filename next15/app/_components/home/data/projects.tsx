@@ -56,7 +56,7 @@ const projectData = [
     project_github: "https://github.com/varunteja007006/Practice_React_Next",
     project_link: "",
     project_images: [jobtoday, jobtoday1],
-    toShow: true,
+    toShow: false,
     projectStatus: COMPLETED,
   },
   {
@@ -99,7 +99,7 @@ const projectData = [
       and delivering an efficient user experience.`,
     ],
     project_github:
-      "https://github.com/varunteja007006/Sportz-Management-Website-Bootstrap",
+      "https://github.com/varunteja007006/Sportz-Management-BootstrapVersion-PHP",
     project_link: "",
     project_images: [sportsmanagement],
     toShow: true,
@@ -128,7 +128,7 @@ const projectData = [
     project_github: "https://github.com/varunteja007006/FitApp-ReactJS",
     project_link: "",
     project_images: [fit, fit1, fit2],
-    toShow: true,
+    toShow: false,
     projectStatus: COMPLETED,
   },
   {
@@ -155,7 +155,7 @@ const projectData = [
       reliable and informative insights into the sentiment of the tweets analyzed.`,
     ],
     project_github:
-      "https://github.com/varunteja007006/Twitter-Sentiment-analysis-on-politicians-using-Django",
+      "https://github.com/varunteja007006/Twitter-Sentiment-Analysis-on-Politicians-Django",
     project_link: "",
     project_images: [sentiment5, sentiment6],
     toShow: true,
@@ -176,8 +176,8 @@ const projectData = [
     project_description: [
       "Collabs: Unleash your potential through collaborative synergy! Our web app combines the power of Django and Materialize CSS to create an engaging platform where students come together to share skills and discover exciting projects. Connect with like-minded individuals, showcase your talents, and embark on a journey of innovation and growth. Join Collabs and unlock endless possibilities for collaboration and personal development!",
     ],
-    project_github: "https://github.com/varunteja007006/collabs_WebApp_Django",
-    project_link: "#",
+    project_github: "https://github.com/varunteja007006/Collabs-Django",
+    project_link: "",
     project_images: [collabs, collabs1, collabs2, collabs3, collabs4],
     toShow: false,
     projectStatus: COMPLETED,
@@ -199,10 +199,10 @@ const projectData = [
     project_description: [
       "Empower your finances with our Bootstrap and Django-powered web app. Seamlessly track income and expenses, while elegant cards display salary, month-end balance, and total expenses. Engage with captivating visualizations like histograms, bar graphs, and pie charts. Effortlessly analyze and manage your money with the added convenience of generating CSV files. Upgrade your financial management with our sleek and feature-rich solution.",
     ],
-    project_github: "https://github.com/varunteja007006/Budget",
-    project_link: "#",
+    project_github: "https://github.com/varunteja007006/Budget-Django",
+    project_link: "",
     project_images: [budget, budget1, budget2, budget3, budget4],
-    toShow: false,
+    toShow: true,
     projectStatus: COMPLETED,
   },
 
