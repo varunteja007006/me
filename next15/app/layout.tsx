@@ -7,6 +7,7 @@ import { Tanstack } from "@/providers/tanstack";
 import { Toaster } from "@/components/ui/sonner";
 import { Footer } from "./_components/footer/Footer";
 import { Navbar } from "./_components/nav/Navbar";
+import BloomContainer from "@/components/bloom-container";
 
 const comicNeue = Comic_Neue({ weight: "400", subsets: ["latin"] });
 
@@ -32,7 +33,9 @@ export default function RootLayout({
           >
             <div className="min-h-screen flex flex-col w-full">
               <Navbar />
-              <div className="flex-1 p-4 bg-accent">{children}</div>
+              <BloomContainer>
+                <div className="flex-1 p-4">{children}</div>
+              </BloomContainer>
               <Footer />
             </div>
             <Toaster />
