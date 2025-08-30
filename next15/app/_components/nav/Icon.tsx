@@ -7,6 +7,45 @@ import Link from "next/link";
 
 export default function Icon() {
   const text = "<Developer />";
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.03,
+      },
+    },
+    hover: {
+      transition: {
+        staggerChildren: 0.035,
+        when: "beforeChildren",
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: {
+      y: -10,
+      opacity: 0,
+      rotate: 0,
+      scale: 1,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      rotate: 0,
+      scale: 1,
+      transition: { stiffness: 500, damping: 30 },
+    },
+    hover: (i: number) => ({
+      y: [0, -6, 4, 0],
+      rotate: [0, -8, 6, 0],
+      scale: [1, 1.14, 0.96, 1],
+      transition: {
+        duration: 0.7,
+        delay: i * 0.02,
+      },
+    }),
+  };
 
   return (
     <motion.div
@@ -29,7 +68,8 @@ export default function Icon() {
             // Use CSS variables from globals.css so light/dark themes match site palette
             // Use the secondary-foreground (lighter, contrast-aware) as the end stop so the
             // gradient doesn't darken too much at the tail in some themes.
-            background: "linear-gradient(90deg, var(--primary), var(--secondary-foreground))",
+            background:
+              "linear-gradient(90deg, var(--primary), var(--secondary-foreground))",
             WebkitBackgroundClip: "text",
             backgroundClip: "text",
             // Fallback color when background-clip isn't supported; primary-foreground is theme-aware
@@ -42,15 +82,15 @@ export default function Icon() {
           }}
           initial="hidden"
           animate="visible"
-          whileHover={{ scale: 1.02 }}
+          whileHover="hover"
+          variants={containerVariants}
         >
           {text.split("").map((char, i) => (
             <motion.span
               key={i}
               style={{ display: "inline-block" }}
-              initial={{ y: -10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: i * 0.03, type: "spring", stiffness: 500, damping: 30 }}
+              variants={letterVariants}
+              custom={i}
             >
               {char === " " ? "\u00A0" : char}
             </motion.span>
