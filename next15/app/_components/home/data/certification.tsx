@@ -1,6 +1,8 @@
+import { generateId } from "@/lib/utils";
+
 const certificationData = [
   {
-    id: 3,
+    id: generateId(),
     certificate_name: "Introduction to Machine Learning",
     certificate_provider: "Coursera",
     certificate_image: "",
@@ -8,7 +10,7 @@ const certificationData = [
     toShow: true,
   },
   {
-    id: 7,
+    id: generateId(),
     certificate_name: "Get Ready for Generative AI",
     certificate_provider: "LinkedIn Learning",
     certificate_image: "",
@@ -16,7 +18,7 @@ const certificationData = [
     toShow: true,
   },
   {
-    id: 9,
+    id: generateId(),
     certificate_name: "React (Basic)",
     certificate_provider: "HackerRank",
     certificate_image: "",
@@ -24,7 +26,7 @@ const certificationData = [
     toShow: true,
   },
   {
-    id: 6,
+    id: generateId(),
     certificate_name: "Python (Basic)",
     certificate_provider: "HackerRank",
     certificate_image: "",
@@ -32,7 +34,7 @@ const certificationData = [
     toShow: true,
   },
   {
-    id: 1,
+    id: generateId(),
     certificate_name: "Introduction of JavaScript",
     certificate_provider: "Great Learning",
     certificate_image: "",
@@ -48,7 +50,7 @@ const certificationData = [
     toShow: false,
   },
   {
-    id: 5,
+    id: generateId(),
     certificate_name: "Building Web Applications in PHP",
     certificate_provider: "Coursera",
     certificate_image: "",
@@ -56,7 +58,7 @@ const certificationData = [
     toShow: false,
   },
   {
-    id: 8,
+    id: generateId(),
     certificate_name: "Introduction to Prompt Engineering for Generative AI",
     certificate_provider: "LinkedIn Learning",
     certificate_image: "",

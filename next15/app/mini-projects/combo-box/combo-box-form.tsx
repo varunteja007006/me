@@ -92,7 +92,7 @@ export default function ComboBoxForm() {
                   label="username"
                   value="id"
                   loading={userData.isLoading}
-                  defaultValue={0}
+                  defaultValue={"0"}
                 />
               </FormControl>
               <FormDescription>

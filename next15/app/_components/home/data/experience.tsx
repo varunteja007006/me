@@ -1,6 +1,8 @@
+import { generateId } from "@/lib/utils";
+
 const experienceData = [
   {
-    id: 2,
+    id: generateId(),
     jobTitle: "Software Engineer",
     company: "invest4Edu",
     workingFrom: "Dec 2023",
@@ -20,7 +22,7 @@ const experienceData = [
     current: true,
   },
   {
-    id: 1,
+    id: generateId(),
     jobTitle: "System Engineer",
     company: "Tata Consultancy Services",
     workingFrom: "May 2021",

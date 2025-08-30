@@ -10,7 +10,7 @@ import {
 import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
-import contactData from "@/app/_components/home/data/contactData";
+import contactData from "@/app/_components/home/data/contact";
 import { useCopyToClipboard } from "usehooks-ts";
 
 export default function ContactIcons({

@@ -17,7 +17,8 @@ import {
 import { CommandList, CommandLoading } from "cmdk";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
-import { Check, ChevronDown, LoaderCircle, Square } from "lucide-react";
+import { Check, ChevronDown, LoaderCircle } from "lucide-react";
+import { ControllerRenderProps, UseFormReturn } from "react-hook-form";
 
 /**
  * Render a ComboBox component with a dropdown menu for selecting options.
@@ -26,12 +27,12 @@ import { Check, ChevronDown, LoaderCircle, Square } from "lucide-react";
 
 export type ComboBoxProps = {
   options: any[];
-  form: any;
-  field: any;
+  form: UseFormReturn<any>;
+  field: ControllerRenderProps<any>;
   value: string;
   label: string;
-  defaultValue?: string | number;
-  cbFunc?: any;
+  defaultValue?: string;
+  cbFunc?: (value: string) => void;
   required?: boolean;
   disabled?: boolean;
   sizeOffset?: number;

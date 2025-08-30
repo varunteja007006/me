@@ -1,6 +1,7 @@
 import React from "react";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Icon() {
   return (
@@ -13,7 +14,7 @@ export default function Icon() {
         ease: "easeInOut",
       }}
     >
-      <a href="/">{`<Developer />`}</a>
+      <Link href="/">{`<Developer />`}</Link>
     </motion.div>
   );
 }

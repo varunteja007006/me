@@ -1,6 +1,8 @@
+import { generateId } from "@/lib/utils";
+
 const academicData = [
   {
-    id: 1,
+    id: generateId(),
     institute:
       "Vel Tech R&D Institute of Science & Technology, Deemed to be a University",
     course: "Bachelor of Technology in Computer Science",
@@ -9,7 +11,7 @@ const academicData = [
     toShow: true,
   },
   {
-    id: 2,
+    id: generateId(),
     institute: "Narayana Junior College",
     course: "Intermediate - MPC",
     year: "(2015-2017)",
@@ -17,7 +19,7 @@ const academicData = [
     toShow: true,
   },
   {
-    id: 3,
+    id: generateId(),
     institute: "The Bodhi School",
     course: "Secondary Education - 10th",
     year: "2015",
