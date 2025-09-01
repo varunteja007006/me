@@ -95,11 +95,7 @@ export default function Projects() {
                     <div className="flex flex-wrap items-center justify-start gap-2">
                       {item.project_badges.map(item => {
                         return (
-                          <Badge
-                            variant={"outline"}
-                            key={item}
-                            className="ring-1 ring-blue-400 dark:ring-purple-600"
-                          >
+                          <Badge variant={"outline"} key={item}>
                             {item}
                           </Badge>
                         )
