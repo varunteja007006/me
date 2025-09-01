@@ -13,7 +13,7 @@ export const miniProjects: {
     description: "This is a simple implementation of block note",
     href: "/mini-projects/block-note",
     githubLink:
-      "https://github.com/varunteja007006/me/tree/main/next15/app/mini-projects/block-note",
+      "https://github.com/varunteja007006/me/tree/main/portfolio/app/mini-projects/block-note",
   },
 ]
 
