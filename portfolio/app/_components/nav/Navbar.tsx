@@ -18,14 +18,11 @@ import { miniProjects, stuffIBuilt } from "./data/nav"
 import Link from "next/link"
 import Icon from "./Icon"
 
-const isMyPortfolio =
-  process.env.NEXT_PUBLIC_PROJECT === "me" || process.env.PROJECT === "me"
-
 export function Navbar() {
   return (
     <div className="hidden w-full flex-row items-center justify-between gap-10 px-4 py-2 md:flex">
       <Icon />
-      {!isMyPortfolio && (
+      {false && (
         <NavigationMenu className="flex-1" viewport={false}>
           <NavigationMenuList>
             <NavigationMenuItem>
