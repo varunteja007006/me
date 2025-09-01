@@ -3,7 +3,6 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Comic_Neue } from "next/font/google"
 import { ThemeProvider } from "@/providers/theme"
-import { Tanstack } from "@/providers/tanstack"
 import { Toaster } from "@/components/ui/sonner"
 import { Footer } from "./_components/footer/Footer"
 import { Navbar } from "./_components/nav/Navbar"
@@ -24,23 +23,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${comicNeue.className} scroll-smooth antialiased`}>
-        <Tanstack>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <BloomContainer>
-              <div className="flex min-h-screen w-full flex-col">
-                <Navbar />
-                <div className="flex-1 p-4">{children}</div>
-                <Footer />
-              </div>
-            </BloomContainer>
-            <Toaster />
-          </ThemeProvider>
-        </Tanstack>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <BloomContainer>
+            <div className="flex min-h-screen w-full flex-col">
+              <Navbar />
+              <div className="flex-1 p-4">{children}</div>
+              <Footer />
+            </div>
+          </BloomContainer>
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   )
