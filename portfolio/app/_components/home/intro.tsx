@@ -39,7 +39,7 @@ export default function Intro() {
             <div>
               {`Hi 👋, I’m Varun, a Senior Software Engineer at Renault Nissan
             Technology and Business Center India (RNTBCI). I build full-stack
-            applications that bring 🤖 AI-powered insights to supplier risk
+            applications that bring AI-powered insights to supplier risk
             assessment, procurement, and sustainability—helping businesses cut
             through paperwork and make better, data-driven decisions. `}
             </div>
