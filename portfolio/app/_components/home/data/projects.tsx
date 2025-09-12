@@ -43,6 +43,29 @@ const projectData = [
   // Completed Projects
   {
     id: generateId(),
+    project_title: `Poker Planner`,
+    project_subtitle: `A simple, no-friction collaborative planning app`,
+    project_badges: [
+      "Next.js",
+      "shadcn/ui",
+      "Axios",
+      "WebSocket",
+      "PostgreSQL",
+      "Tailwind CSS",
+    ],
+    project_description: [
+      `Poker Planner is a hassle-free planning tool where users can create or join rooms without any signup or login process. Just hop in and start collaborating instantly.`,
+      `A room host initiates the session, and participants can vote on tasks or estimates. Results are visualized with sleek bar graphs for clear insights.`,
+      `Built with Next.js and shadcn/ui on the frontend for a fast and beautiful user experience. The backend combines HTTP and WebSocket protocols with PostgreSQL for real-time updates and reliable data storage.`,
+    ],
+    project_github: "https://github.com/varunteja007006/poker-planner",
+    project_link: "https://poker-planner.buildio.pro/",
+    // project_images: [pokerplanner, pokerplanner1],
+    toShow: true,
+    projectStatus: COMPLETED,
+  },
+  {
+    id: generateId(),
     project_title: `JobToday`,
     project_subtitle: `An awesome Job manager`,
     project_badges: ["Axios", "React JS", "Redux", "Recharts", "Tailwind CSS"],
@@ -53,7 +76,7 @@ const projectData = [
       `This application is built on the MERN Stack Framework, with JWT-based authentication for 
       enhanced security.`,
     ],
-    project_github: "https://github.com/varunteja007006/Practice_React_Next",
+    project_github: "https://github.com/varunteja007006/JobToday-ReactJS",
     project_link: "",
     project_images: [jobtoday, jobtoday1],
     toShow: false,
@@ -79,9 +102,9 @@ const projectData = [
       `I have built it using Next JS and used various react libraries to demonstrate their usages and features.`,
       `There are many more micro projects that are built to get the understanding of various libraries like React Hook Form, Zustand, Zod, React Table (Tanstack Table), React Query (Tanstack Query), etc...`,
     ],
-    project_github: "https://github.com/varunteja007006/JobToday-ReactJS",
+    project_github: "https://github.com/varunteja007006/Practice_React_Next",
     project_link: "https://varunteja007006.netlify.app/",
-    toShow: true,
+    toShow: false,
     projectStatus: COMPLETED,
   },
   {
