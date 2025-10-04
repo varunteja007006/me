@@ -1,0 +1,23 @@
+{
+  "name": "@workspace/utils",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@workspace/typescript-config": "workspace:*",
+    "typescript": "^5.9.2"
+  },
+  "exports": {
+    "./utils": {
+      "types": "./src/utils.ts",
+      "default": "./dist/utils.js"
+    }
+  }
+}
