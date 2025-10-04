@@ -18,7 +18,7 @@ export default function Page() {
             Build Something Epic
           </span>
         </h2>
-        <p className="text-lg">Starter Template</p>
+        <p className="text-lg">Starter Template ⚡</p>
       </main>
 
       {/* Footer */}
