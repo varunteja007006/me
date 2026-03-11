@@ -5,10 +5,12 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "dev:learnings": "turbo dev --filter=learnings",
-    "dev:portfolio": "turbo dev --filter=portfolio",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev:learnings": "turbo dev --filter=learnings",
+    "build:learnings": "turbo build --filter=learnings",
+    "start:learnings": "pnpm --filter=learnings start",
+    "dev:portfolio": "turbo dev --filter=portfolio",
     "build:portfolio": "turbo build --filter=portfolio",
     "start:portfolio": "pnpm --filter=portfolio start"
   },

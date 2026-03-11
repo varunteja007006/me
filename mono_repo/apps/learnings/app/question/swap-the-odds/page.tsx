@@ -13,10 +13,10 @@ export default function SwapTheOdds() {
   const [cart2, setCart2] = React.useState([...cartSample2]);
 
   const [cart3, setCart3] = React.useState(
-    [...cartSample1].map((item) => ({ item, checked: false }))
+    [...cartSample1].map((item) => ({ item, checked: false })),
   );
   const [cart4, setCart4] = React.useState(
-    [...cartSample2].map((item) => ({ item, checked: false }))
+    [...cartSample2].map((item) => ({ item, checked: false })),
   );
 
   const onClickSwap = () => {

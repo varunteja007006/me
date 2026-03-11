@@ -8,7 +8,7 @@ export default function ChessBoard() {
     .map(() => Array(8).fill(null));
 
   const [hoverPoints, setHoverPoints] = React.useState<[number, number] | []>(
-    []
+    [],
   );
 
   const handleOnHover = (rowIndex: number, colIndex: number) => {
@@ -46,10 +46,10 @@ export default function ChessBoard() {
                 background: hovered
                   ? "red"
                   : bishopPath
-                  ? "#6366f1"
-                  : isDark
-                  ? "black"
-                  : "white",
+                    ? "#6366f1"
+                    : isDark
+                      ? "black"
+                      : "white",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -63,7 +63,7 @@ export default function ChessBoard() {
               {colIndex + 1}
             </div>
           );
-        })
+        }),
       )}
     </div>
   );

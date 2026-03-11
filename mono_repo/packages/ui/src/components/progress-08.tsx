@@ -77,7 +77,7 @@ export const CircularProgress = ({
         <div
           className={cn(
             "absolute inset-0 flex items-center justify-center text-md",
-            labelClassName
+            labelClassName,
           )}
         >
           {renderLabel ? renderLabel(value) : value}
@@ -86,5 +86,3 @@ export const CircularProgress = ({
     </div>
   );
 };
-
-

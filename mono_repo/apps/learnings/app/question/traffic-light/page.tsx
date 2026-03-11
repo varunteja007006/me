@@ -24,7 +24,7 @@ export default function TrafficLightPage() {
               key={index}
               className={cn(
                 `size-20 rounded-full bg-gray-500`,
-                index === active && colors[index]
+                index === active && colors[index],
               )}
             ></div>
           );

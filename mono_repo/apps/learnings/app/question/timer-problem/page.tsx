@@ -53,7 +53,7 @@ export default function TimerProblem() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     cbFunc: React.Dispatch<React.SetStateAction<string>>,
-    maxValue: number
+    maxValue: number,
   ) => {
     const value = e.target.value;
 

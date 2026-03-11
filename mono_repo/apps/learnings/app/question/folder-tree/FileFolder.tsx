@@ -163,7 +163,7 @@ export default function FileFolder() {
 }
 
 const RenderFileFolder = (
-  props: FileFolder & { setFiles: Dispatch<SetStateAction<FileFolder[]>> }
+  props: FileFolder & { setFiles: Dispatch<SetStateAction<FileFolder[]>> },
 ) => {
   const setFiles = props.setFiles;
   const id = props.id;
@@ -173,7 +173,7 @@ const RenderFileFolder = (
 
   const [name, setName] = React.useState("");
   const [createType, setCreateType] = React.useState<"file" | "folder" | "">(
-    ""
+    "",
   );
   const [open, setOpen] = React.useState(false);
 
@@ -205,7 +205,7 @@ const RenderFileFolder = (
   const handleNewFileFolder = (
     list: FileFolder[],
     type: "file" | "folder",
-    name: string
+    name: string,
   ): FileFolder[] => {
     return list.map((item) => {
       if (item.id === id && item.children && Array.isArray(item.children)) {

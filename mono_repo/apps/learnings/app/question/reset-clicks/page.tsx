@@ -57,10 +57,10 @@ export default function ResetClicks() {
                 item.order = -1;
               }
               return item;
-            })
+            }),
           ),
 
-        timer * i
+        timer * i,
       );
     }
 

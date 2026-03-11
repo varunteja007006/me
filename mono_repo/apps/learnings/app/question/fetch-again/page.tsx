@@ -25,10 +25,10 @@ export default function FetchAgain() {
         {error
           ? `Oops something went wrong!!!`
           : isLoading
-          ? `Loading...`
-          : data && !data
-          ? (data as Data[]).map((item: Data) => item.title)
-          : `No data`}
+            ? `Loading...`
+            : data && !data
+              ? (data as Data[]).map((item: Data) => item.title)
+              : `No data`}
       </div>
     </div>
   );
