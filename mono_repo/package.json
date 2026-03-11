@@ -5,6 +5,8 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:learnings": "turbo dev --filter=learnings",
+    "dev:portfolio": "turbo dev --filter=portfolio",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "build:portfolio": "turbo build --filter=portfolio",
