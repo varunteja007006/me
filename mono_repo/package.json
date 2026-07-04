@@ -7,6 +7,8 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "node ./scripts/clean-workspace.mjs",
+    "clean:dry": "node ./scripts/clean-workspace.mjs --dry-run",
     "dev:learnings": "turbo dev --filter=learnings",
     "build:learnings": "turbo build --filter=learnings",
     "start:learnings": "pnpm --filter=learnings start",

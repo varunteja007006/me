@@ -29,3 +29,17 @@ To use the components in your app, import them from the `ui` package.
 ```tsx
 import { Button } from "@workspace/ui/components/button";
 ```
+
+## Workspace cleanup
+
+From the repo root, you can remove all `node_modules` and common build/cache directories across apps/packages/workspaces:
+
+```bash
+pnpm clean
+```
+
+Preview what will be removed without deleting anything:
+
+```bash
+pnpm clean:dry
+```
