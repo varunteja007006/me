@@ -101,7 +101,9 @@ async function findTargets(dir, acc, targetDirs, targetFiles) {
 
 			if (targetDirs.has(entry.name)) {
 				acc.push(fullPath);
-				continue;
+				// Don't recurse into node_modules to avoid corrupting
+				// packages inside the pnpm store (e.g. next/dist).
+				if (entry.name === "node_modules") continue;
 			}
 
 			await findTargets(fullPath, acc, targetDirs, targetFiles);

@@ -71,15 +71,15 @@ export default function SwapTheOdds() {
       <h1 className="text-lg">Swap the odds</h1>
       <div className="space-y-6">
         <div className="p-2 border bg-slate-200 text-black flex flex-row gap-5">
-          {cart1.map((item, index) => (
-            <div className="bg-green-300 p-1 px-2 rounded-xl" key={index}>
+          {cart1.map((item) => (
+            <div className="bg-green-300 p-1 px-2 rounded-xl" key={item}>
               {item}
             </div>
           ))}
         </div>
         <div className="p-2 border bg-slate-200 text-black flex flex-row gap-5">
-          {cart2.map((item, index) => (
-            <div className="bg-yellow-300 p-1 px-2 rounded-xl" key={index}>
+          {cart2.map((item) => (
+            <div className="bg-yellow-300 p-1 px-2 rounded-xl" key={item}>
               {item}
             </div>
           ))}
