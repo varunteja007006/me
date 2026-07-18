@@ -9,6 +9,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "node ./scripts/clean-workspace.mjs",
     "clean:dry": "node ./scripts/clean-workspace.mjs --dry-run",
+    "clean:cache": "node ./scripts/clean-workspace.mjs --mode cache",
+    "clean:deps": "node ./scripts/clean-workspace.mjs --mode deps",
     "dev:learnings": "turbo dev --filter=learnings",
     "build:learnings": "turbo build --filter=learnings",
     "start:learnings": "pnpm --filter=learnings start",
