@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/lib/utils";
+import { cn } from "@workspace/ui/lib/utils";
 import React from "react";
 
 const colors = ["bg-red-400", "bg-yellow-400", "bg-green-400"];

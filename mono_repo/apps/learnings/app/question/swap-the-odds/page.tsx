@@ -24,9 +24,11 @@ export default function SwapTheOdds() {
     const temp2 = [...cart2];
 
     for (let i = 0; i < cart1.length; i++) {
-      if (i % 2 !== 0) {
-        temp[i] = cart2[i];
-        temp2[i] = cart1[i];
+      const item1 = cart1[i];
+      const item2 = cart2[i];
+      if (i % 2 !== 0 && item1 && item2) {
+        temp[i] = item2;
+        temp2[i] = item1;
       }
     }
     setCart1(temp2);
@@ -35,13 +37,15 @@ export default function SwapTheOdds() {
 
   const onClickCheckbox1 = (item: number) => {
     const temp = [...cart3];
-    temp[item].checked = !temp[item].checked;
+    const target = temp[item];
+    if (target) target.checked = !target.checked;
     setCart3(temp);
   };
 
   const onClickCheckbox2 = (item: number) => {
     const temp = [...cart4];
-    temp[item].checked = !temp[item].checked;
+    const target = temp[item];
+    if (target) target.checked = !target.checked;
     setCart4(temp);
   };
 
@@ -50,15 +54,17 @@ export default function SwapTheOdds() {
     let temp2 = [...cart4];
 
     for (let i = 0; i < cart3.length; i++) {
-      if (temp[i].checked || temp2[i].checked) {
-        const cart3Item = temp[i].item;
-        const cart4Item = temp2[i].item;
+      const box3 = temp[i];
+      const box4 = temp2[i];
+      if (box3 && box4 && (box3.checked || box4.checked)) {
+        const cart3Item = box3.item;
+        const cart4Item = box4.item;
 
-        temp[i].item = cart4Item;
-        temp2[i].item = cart3Item;
+        box3.item = cart4Item;
+        box4.item = cart3Item;
 
-        temp[i].checked = false;
-        temp2[i].checked = false;
+        box3.checked = false;
+        box4.checked = false;
       }
     }
 

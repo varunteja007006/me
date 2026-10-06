@@ -23,8 +23,11 @@ export default function ResetClicks() {
     order = order + 1;
     setState((prev) => {
       const newState = [...prev];
-      newState[id - 1].isClicked = true;
-      newState[id - 1].order = order;
+      const buttonState = newState[id - 1];
+      if (buttonState) {
+        buttonState.isClicked = true;
+        buttonState.order = order;
+      }
       return newState;
     });
     if (order === 7) restState();
@@ -48,6 +51,7 @@ export default function ResetClicks() {
 
     for (let i = 0; i < dupState.length; i++) {
       const ele = dupState[i];
+      if (!ele) continue;
       setTimeout(
         () =>
           setState((prev) =>

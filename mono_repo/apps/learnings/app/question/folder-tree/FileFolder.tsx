@@ -331,7 +331,7 @@ const RenderFileFolder = (
             <DialogClose asChild>
               <Button
                 type="button"
-                variant="success"
+                variant="default"
                 onClick={handleSubmit}
                 disabled={createType === "" || name === ""}
               >

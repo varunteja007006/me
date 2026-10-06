@@ -155,7 +155,7 @@ export default function TimerProblem() {
             />
           </div>
           <div className="flex gap-4 justify-center items-center w-full">
-            <Button variant={"success"} onClick={handleStart}>
+            <Button variant="default" onClick={handleStart}>
               START
             </Button>
 
